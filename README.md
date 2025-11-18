@@ -1,47 +1,93 @@
-# 05-DESIGN-AND-ANALYSIS-OF-MICROSTRIP-ANTENNA-USING-CST-MICROWAVE-STUDIO (LAYOUT)
 
-**Aim of the Experiment:** To design a quarter wave transformer for matching a 50 Ohm microstrip line with a load of 123 Ohms
-Software to be used: CST studio suite 2019 (Student edition)
+# 04-POWER-MEASUREMENT-USING-MAGIC-TEE
 
-**Design:**
+**A.Aim:**
 
-**Mathematical Calculation**
+To measure isolation between E and Harms of the magic tee and Demonstrate 3 dB powerdivision in the arm of magic tree.
 
-<img width="601" height="420" alt="image" src="https://github.com/user-attachments/assets/b6c74464-e862-4d26-be7c-e76738107067" />
+**B.Apparatus Used:**
 
-Width of the quarter wave line=1.138 mmWidth of the stripline=2.93 mm
-Height of the substrate=1.6 mmZ0=50 ohm,ZL=123 ohm Zo’=√(50*123)= 78.42 ohm
-Length of the quarter wave line = 18mmLamda g =72 , Lamda not=128
-Bandwidth calculation from s-parameter in quater wave line=1.33 GhzFrequency=2.4 Ghzc, Ε eff=3.024
+Klystron power supply, Klystron Mount, Isolator, Attenuator, Frequency meter, VSWR meter,magic tee and matched terminations.
 
-**	Design of microstrip line terminated with the desired load**
+**C.Experimental Setup:**
 
+<img width="701" height="358" alt="image" src="https://github.com/user-attachments/assets/8619d64e-d78f-49e2-b0f8-2e2dc038f6c9" />
 
-<img width="621" height="185" alt="image" src="https://github.com/user-attachments/assets/908adc01-814f-450c-b969-7e1342681af4" />
+**D.Theory:**
 
+A four port junction which is a combination of an E-plane and H-plane tee is called Hybrid Tee.When matched elements are introduced to reduce the reflections, it is called a magic Tee.
+It has four arms or ports which have the names indicated in figure 9.
 
-**S11 characteristics of the microstrip line terminated with the load**
+<img width="288" height="232" alt="image" src="https://github.com/user-attachments/assets/826d1e4f-cdf8-496a-b571-a34130bcd30b" />
 
+The arm which makes an H-plane tee with the collinear arm is called H-arm or Shunt arm. The fourth arm which makes E-plane tee with the collinear arms is called E- arm or series arm. The shunt and series arms are polarized. i.e. the voltage vectors in these two arms are perpendicular toeach other. Therefore as long as there is nothing within the junction to rotate
+the polarization, there can be no coupling between the two arms. The E and H arms are matched byemploying posts and irises to minimize reflections from these two ports.
+The magic associated with the hybrid junction is the way in which the power is divided in the various arms. The signal fed into the shunt or H-arms divides its ~ If equally and in phase in the twoside arms with no coupling in E-arm. When the signal is fed into the series or E-arm it also divides itself equally in the two arms, but this time two halves are 180o out of phase ad there is no coupling to the H-arm. If the power is fed into one of the arms, it divides equally in the shunt and series arm and there is no coupling in the other side arm. That is to finally that in a magic tee, opposite arms are isolated.
+A magic tee can also be used as a signal combiner. If the signals are fed to both the side arms, theywill combine in phase in H-arm and 180o out of phase in E-arm.
 
-<img width="640" height="203" alt="image" src="https://github.com/user-attachments/assets/f7d30519-56c3-4642-b446-7b93a7a1e33b" />
+**A magic tee is normally characterized by two quantities:**
 
+1.	Isolation between E and H arms
+2.	Power division in collinear arms
 
-**	Design of microstrip line terminated with quarter wave line and the desired load**
+**Isolation between E and H arms**
 
-
-<img width="642" height="184" alt="image" src="https://github.com/user-attachments/assets/4fcf36a6-131b-45e0-b569-8f50565faf0e" />
-
-
-**	S11 characteristics of the microstrip line terminated with quarter wave line and the desired load**
-
-
-<img width="558" height="162" alt="image" src="https://github.com/user-attachments/assets/863dbdd2-254c-4165-b167-3bdbb331efc7" />
-
-
-**Conclusion:**
-
-From this experiment we got the bandwidth value of 1.33 Ghz with a impedance matching of 78.42 ohm and also got the width of quarter wave line of 1.138 mm.
+If the power flowing into E arm is taken as PE and power flowing out of H-arm as PH thenIsolation(dB) = -10 log10 PH/ PE This assumes that both the collinear arms are match terminated.
 
 
 
+**Power division**
 
+The power fed in either the E or H arm should divide itself equally in both the side arms, when the opposite port is match terminated. If we designate the power entering the E arm as PE and power in side arms as PC1 and PC2 then the ratio of the power coupled in side arms to that entering inthe E-arm is given by the relation.
+Coupling (dB) = 10 log10 PC1/ PH = -10 log10 PC2/ PH.
+
+**E.	Procedure: General**
+
+1.	Set up the equipment as shown in fig 9a.
+2.	Keep the control knobs of Klystron Power Supply as belowMode Switch	: AM
+    Beam Voltage Knob : Fully Anti Clockwise
+    Repeller Voltage Knob	: Fully Clockwise Meter Switch	: Cathode Voltage Position
+3.	Measurement or isolation between E and H arms
+    3.1	Set the attenuator around 20dB. Let this setting be (A1) dB
+    3.2	Achieve a state reference reading on the SWR meter, preferably in 40dB range of theSWR meter
+    3.3	Disconnect and setup as shown in fig 9b
+    3.4	Reduce the attenuation till the SWR meter reads the value obtained in step 3.2 notethe attenuation setting (A2) dB. The difference in the attenuator setting (A1-A2) dB gives the isolation in dB.
+4.	Experimental setup for demonstrating the 3 dB power division in the collinear arms.
+    4.1	Now the power input be either E or H arms.
+    4.2	Set the attenuator to get reference reading on SWR meter without the componentunder test. Note the attenuator setting (A1) dB
+    4.3	Connect the component under test(Magic tee)
+    4.4	Reduce the attenuation to get the reference reading obtained in step 4.2
+    4.5	Note down the attenuator setting (A2) dB
+
+The difference in the attenuator settings gives the ration of the
+power coupled to thecollinear to that in the main arm, in dB. This value is around 3dB.
+
+**F.	Observation:**
+
+**Isolation measurement** (Tabulation)
+
+**Measurement of power division** 
+
+![WhatsApp Image 2025-11-06 at 08 56 03_2052feda](https://github.com/user-attachments/assets/54eb8148-ba8e-4846-a11e-83823fc7267a)
+
+
+
+**G.	Analysis of Results: (Write your own)**
+
+![WhatsApp Image 2025-11-06 at 08 56 02_a8e723f1](https://github.com/user-attachments/assets/b9a362ae-ba6b-4847-8bd8-f4ef88b1e949)
+
+
+**H.	Conclusions: (Write your Own)**
+
+Isolation between E and H arms (dB) = (A1 – A2) dB
+Coupling between collinear arms and E/H arms (dB) = (A1 – A2) dB
+
+**Precautions:**
+
+•	Check the connections before switching on the kit.
+•	Connections should be done properly.
+•	Observation should be taken properly.
+
+**Result:**
+
+The isolation between the E and H arms of the magic tee was successfully measured and found to be within the expected range, indicating proper isolation between the ports. The power division between the collinear arms was observed to be approximately 3 dB, confirming that the magic tee equally divides the input power into two arms with minimal loss. Thus, the magic tee functions effectively as a hybrid junction for power division and signal isolation in microwave systems.
